@@ -1,5 +1,6 @@
-const cards = ["😂","😂","🦴","🦴","😍","😍","😒","😒","🤑",
-"🤑","🤬","🤬","🤢","🤢","💀","💀","👻","👻","🎃","🎃"];
+const cards = ["🎃","🎃","👻","👻","💀","💀","🦇","🦇","🕷️","🕷️",
+"🕸️","🕸️","🧛‍♂️","🧛‍♂️","🧟‍♂️","🧟‍♂️","🧙‍♀️","🧙‍♀️","😈","😈"];
+
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -23,6 +24,32 @@ var foundCounter = 0;
 var scoreCounter = 0;
 var playPressed = false;
 
+document.querySelector('#playButton').addEventListener('click', function(){
+    playPressed = true;
+
+    let boxes = document.querySelectorAll('.item');
+    let i = 0;
+
+    function openBox() {
+        if (i < boxes.length) {
+            boxes[i].classList.add('boxOpen');
+            i++;
+            setTimeout(openBox, 100);
+        } else {
+            setTimeout(closeBoxes, 2000);
+        }
+    }
+
+    function closeBoxes() {
+        boxes.forEach(function(box) {
+            box.classList.remove('boxOpen');
+        });
+    }
+
+    openBox();
+
+});
+
 // Function to show the alert
 function showAlert() {
     let winnerAlert = document.querySelector('.winnerAlert');
@@ -40,7 +67,6 @@ function hideAlert() {
     let background = document.querySelector('body::after');
     background.style.display = 'none';
 }
-
 
 for(var i = 0; i < shuffledCards.length; i++)
 {
@@ -84,7 +110,6 @@ for(var i = 0; i < shuffledCards.length; i++)
         document.querySelector('#score').textContent = "Score: "+scoreCounter;
         document.querySelector('#endScore').textContent = "Score: "+scoreCounter;
     }
-
     if(!idMap[shuffledCards[i]]) {
         idMap[shuffledCards[i]] = idCounter++;
     }
@@ -92,29 +117,3 @@ for(var i = 0; i < shuffledCards.length; i++)
 
     document.querySelector('.gameBox').appendChild(box);
 }
-
-
-let myButton = document.querySelector('#playButton');
-
-myButton.addEventListener('click', function() {
-    let boxes = document.querySelectorAll('.item');
-    let i = 0;
-
-    function openBox() {
-        if (i < boxes.length) {
-            boxes[i].classList.add('boxOpen');
-            i++;
-            setTimeout(openBox, 100);
-        } else {
-            setTimeout(closeBoxes, 2000);
-        }
-    }
-
-    function closeBoxes() {
-        boxes.forEach(function(box) {
-            box.classList.remove('boxOpen');
-        });
-    }
-
-    openBox();
-});
