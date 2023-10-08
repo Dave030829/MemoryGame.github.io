@@ -135,7 +135,7 @@ body::after {
     z-index: 9998;
 }
 
-@media (max-width: 800px){
+@media (max-width: 860px){
     .item{
         width: 100px;
         height: 100px;
@@ -149,5 +149,13 @@ body::after {
         width: 60px;
         height: 60px;
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 380px){
+    .item{
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
     }
 }
