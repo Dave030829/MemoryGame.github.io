@@ -22,12 +22,13 @@ var idMap = {};
 var matchCheck = [];
 var foundCounter = 0;
 var scoreCounter = 0;
-var playPressed = false;
 
 document.querySelector('#playButton').addEventListener('click', function(){
-    playPressed = true;
 
-    let boxes = document.querySelectorAll('.item');
+    document.getElementById('welcomePageID').style.visibility = 'hidden';
+
+    setTimeout(() => {
+        let boxes = document.querySelectorAll('.item');
     let i = 0;
 
     function openBox() {
@@ -47,7 +48,7 @@ document.querySelector('#playButton').addEventListener('click', function(){
     }
 
     openBox();
-
+    }, 1000);
 });
 
 // Function to show the alert

@@ -36,6 +36,18 @@ body{
     font-weight: bold;
 }
 
+.welcomePage button{
+    font-size: 2rem;
+    height: 3rem;
+    width: 80%;
+    background-color: rgb(171, 51, 0);
+    color: aliceblue;
+    border: 0;
+    border-radius: 10px;
+    font-family: halloweenFont, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
 button:hover{
     background-color: rgb(115, 35, 0);
     box-shadow: 2px 3px 5px 0px black;
@@ -160,6 +172,33 @@ body::after {
     height: 100%;
     background-color: rgba(0, 0, 0, 1);
     z-index: 9998;
+}
+
+.welcomePage{
+    color: orangered;
+    position: fixed;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: orangered 5px solid;
+    border-radius: 10px;
+    z-index: 1;
+    transition: 0.25s;
+    gap: 1rem;
+    font-size: 200%;
+    margin-top: 5%;
+    opacity: 90%;
+}
+
+.welcomePage .themeSelector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 860px){
