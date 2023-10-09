@@ -24,7 +24,7 @@ body{
     width: 70%;
 }
 
-button{
+.buttons button{
     font-size: 2rem;
     height: 3rem;
     width: 100%;
@@ -116,18 +116,18 @@ button:hover{
 }
 
 .winnerAlert{
+    visibility: hidden;
     border: 2px black solid;
     border-radius: 10px;
     background-color: aliceblue;
     color: orangered;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 5%;
-    visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -137,6 +137,17 @@ button:hover{
     box-shadow: 5px 5px 10px black;
     gap: 2rem;
 
+}
+
+#playAgain{
+    font-size: 2rem;
+    width: 100%;
+    background-color: rgb(171, 51, 0);
+    color: aliceblue;
+    border: 0;
+    border-radius: 10px;
+    font-family: halloweenFont, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 body::after {
