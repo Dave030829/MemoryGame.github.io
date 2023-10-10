@@ -1,18 +1,18 @@
 @font-face{
     font-family: halloweenFont;
-    src: url(Spooky_Stories.ttf);
+    src: url(Miraculous&Christmas.ttf);
 }
 
 body{
-    background-color: rgb(223, 152, 9);
+    background-color: rgb(169, 199, 219);
     font-family: halloweenFont, Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
 }
 
 .container h1{
-    font-size: 3rem;
-    color: aliceblue;
+    font-size: 4rem;
+    color: rgb(50, 147, 231);
 }
 
 .buttons{
@@ -28,7 +28,7 @@ body{
     font-size: 2rem;
     height: 3rem;
     width: 100%;
-    background-color: rgb(171, 51, 0);
+    background-color: rgb(0, 106, 171);
     color: aliceblue;
     border: 0;
     border-radius: 10px;
@@ -37,10 +37,10 @@ body{
 }
 
 .welcomePage button{
-    font-size: 2rem;
+    font-size: 2.7rem;
     height: 3rem;
     width: 80%;
-    background-color: rgb(171, 51, 0);
+    background-color: rgb(0, 106, 171);
     color: aliceblue;
     border: 0;
     border-radius: 10px;
@@ -49,7 +49,7 @@ body{
 }
 
 button:hover{
-    background-color: rgb(115, 35, 0);
+    background-color: rgb(0, 87, 142);
     box-shadow: 2px 3px 5px 0px black;
 }
 
@@ -59,7 +59,7 @@ button:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('backgroundHalloween.jpg');
+    background-image: url('christmasBackground2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -97,9 +97,10 @@ button:hover{
 }
 
 .item::after{
+    background-color: aliceblue;
     content: '';
     position: absolute;
-    background-image: url('pumpkin.png');
+    background-image: url('snowflake2.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -132,7 +133,7 @@ button:hover{
     border: 2px black solid;
     border-radius: 10px;
     background-color: aliceblue;
-    color: orangered;
+    color: rgb(0, 106, 171);
     font-weight: bold;
     font-size: 3rem;
     display: flex;
@@ -154,7 +155,7 @@ button:hover{
 #playAgain{
     font-size: 2rem;
     width: 100%;
-    background-color: rgb(171, 51, 0);
+    background-color: rgb(0, 106, 171);
     color: aliceblue;
     border: 0;
     border-radius: 10px;
@@ -175,7 +176,7 @@ body::after {
 }
 
 .welcomePage{
-    color: orangered;
+    color: rgb(0, 106, 171);
     position: fixed;
     flex-direction: column;
     background-color: aliceblue;
@@ -184,7 +185,7 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: orangered 5px solid;
+    border: rgb(0, 106, 171) 5px solid;
     border-radius: 10px;
     z-index: 1;
     transition: 0.25s;

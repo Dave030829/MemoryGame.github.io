@@ -1,6 +1,65 @@
 const cards = ["🎃","🎃","👻","👻","💀","💀","🦇","🦇","🕷️","🕷️",
 "🕸️","🕸️","🧛‍♂️","🧛‍♂️","🧟‍♂️","🧟‍♂️","🧙‍♀️","🧙‍♀️","😈","😈"];
 
+const cardsC = ["🎅","🎅","🤶","🤶","🎄","🎄","⭐","⭐","🦌","🦌",
+"🛷","🛷","🧦","🧦","🔔","🔔","🕯️","🕯️","🎁","🎁"];
+
+const cardsGym = ["🌞","🌞","🏖️","🏖️","🍦","🍦","🍉","🍉","🏄‍♂️","🏄‍♂️",
+"⛵","⛵","👙","👙","🕶️","🕶️","🌻","🌻","🔥","🔥"];
+
+
+var halloweenTheme = document.getElementById('halloween');
+var christmasTheme = document.getElementById('christmas');
+var gymTheme = document.getElementById('gym');
+var shuffledCards = shuffle(cards);
+
+// Add a click event listener to the button
+christmasTheme.addEventListener('click', function() {
+    shuffledCards = shuffle(cardsC);
+    switchTheme('styleChristmas.css');
+    updateBoxes();
+});
+
+halloweenTheme.addEventListener('click', function() {
+    shuffledCards = shuffle(cards);
+    switchTheme('style.css');
+    updateBoxes();
+});
+
+gymTheme.addEventListener('click', function() {
+    shuffledCards = shuffle(cardsGym);
+    switchTheme('styleGym.css');
+    updateBoxes();
+});
+
+function updateBoxes() {
+    let boxes = document.querySelectorAll('.item');
+    for(let i = 0; i < boxes.length; i++) {
+        boxes[i].innerHTML = shuffledCards[i];
+    }
+}
+
+
+function switchTheme(theme) {
+    // Get the link element for the stylesheet
+    var oldlink = document.getElementsByTagName("link").item(0);
+
+    // Create a new link element
+    var newlink = document.createElement("link");
+
+    // Set the attributes for the new link element
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+
+    // Set the href attribute to the path of the new stylesheet
+    newlink.setAttribute("href", theme);
+
+    // Replace the old link element with the new link element
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+
+
+
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -16,7 +75,7 @@ function shuffle(array) {
     return array;
 }
 
-var shuffledCards = shuffle(cards);
+
 var idCounter = 1;
 var idMap = {};
 var matchCheck = [];
