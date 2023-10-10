@@ -4,13 +4,13 @@ const cards = ["🎃","🎃","👻","👻","💀","💀","🦇","🦇","🕷️"
 const cardsC = ["🎅","🎅","🤶","🤶","🎄","🎄","⭐","⭐","🦌","🦌",
 "🛷","🛷","🧦","🧦","🔔","🔔","🕯️","🕯️","🎁","🎁"];
 
-const cardsGym = ["🌞","🌞","🏖️","🏖️","🍦","🍦","🍉","🍉","🏄‍♂️","🏄‍♂️",
+const cardssummer = ["🌞","🌞","🏖️","🏖️","🍦","🍦","🍉","🍉","🏄‍♂️","🏄‍♂️",
 "⛵","⛵","👙","👙","🕶️","🕶️","🌻","🌻","🔥","🔥"];
 
 
 var halloweenTheme = document.getElementById('halloween');
 var christmasTheme = document.getElementById('christmas');
-var gymTheme = document.getElementById('gym');
+var summerTheme = document.getElementById('summer');
 var shuffledCards = shuffle(cards);
 
 // Add a click event listener to the button
@@ -26,9 +26,9 @@ halloweenTheme.addEventListener('click', function() {
     updateBoxes();
 });
 
-gymTheme.addEventListener('click', function() {
-    shuffledCards = shuffle(cardsGym);
-    switchTheme('styleGym.css');
+summerTheme.addEventListener('click', function() {
+    shuffledCards = shuffle(cardssummer);
+    switchTheme('styleSummer.css');
     updateBoxes();
 });
 
